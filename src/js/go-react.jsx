@@ -3,15 +3,19 @@ import ReactDOM from "react-dom";
 import Mori from "./Mori"
 // import ToDoApp from "./ToDoApp"
 
+import InputComponent from "./InputComponent"
+import FilterComponent from "./FilterComponent"
+import ListComponent from "./ListComponent"
+
+
 class Layout extends React.Component {
   render() {
     return (
       <div>
-        <h1>Fuga</h1>
-        <Mori/>
-        {/* <ToDoApp/> */}
+        <InputComponent/>
+        <FilterComponent/>
+        <ListComponent/>
       </div>
-      
     );
   }
 }

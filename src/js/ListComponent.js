@@ -2,6 +2,24 @@ import React from "react";
 
 export default function ListComponent() {
     return (
-        <h1>ListComponent</h1>
+        <div>
+            <ul>
+                <li>
+                    <span>タイトル</span>
+                    <span><input type="checkbox"/></span>
+                    <span><button>削除</button></span> 
+                </li>
+                <li>
+                    <span>タイトル</span>
+                    <span><input type="checkbox"/></span>
+                    <span><button>削除</button></span> 
+                </li>
+                <li>
+                    <span>タイトル</span>
+                    <span><input type="checkbox"/></span>
+                    <span><button>削除</button></span> 
+                </li>
+            </ul>
+        </div>
     )
 }

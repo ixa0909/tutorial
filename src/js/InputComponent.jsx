@@ -2,6 +2,9 @@ import React from "react";
 
 export default function InputComponent() {
     return (
-        <h1>InputComponent</h1>
+        <form>
+            <input type="text" placeholder="タイトル" />
+            <button>保存</button>
+        </form>
     )
 }
