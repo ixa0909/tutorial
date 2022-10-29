@@ -19,7 +19,12 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }]
-      }]
+      },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] 
+    },
+    { test: /\.ts$/, use: 'ts-loader' }
+  ]
     },
     output: {
       path: __dirname + "/src/js/",
