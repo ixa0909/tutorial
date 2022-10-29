@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import ReactDOM from "react-dom";
 import Mori from "./Mori"
 // import ToDoApp from "./ToDoApp"
@@ -7,9 +7,23 @@ import InputComponent from "./InputComponent"
 import FilterComponent from "./FilterComponent"
 import ListComponent from "./ListComponent"
 
+// const[todoItems,setTodoItems] = useState([])
 
-class Layout extends React.Component {
-  render() {
+// useEffect(() =>{
+//   (async () =>{
+//     setTodoItems([
+//       {id:1,t:"1",c:true},
+//       {id:1,t:"1",c:true},
+//       {id:1,t:"1",c:true},
+//       {id:1,t:"1",c:true},
+//       {id:1,t:"1",c:true},
+//     ])
+//   })()
+// },[])
+
+
+function Layout (){
+  
     return (
       <div>
         <InputComponent/>
@@ -18,7 +32,7 @@ class Layout extends React.Component {
       </div>
     );
   }
-}
+
 
 
 const app = document.getElementById('output');
