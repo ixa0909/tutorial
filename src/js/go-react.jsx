@@ -11,8 +11,9 @@ import ListComponent from "./ListComponent"
 
 
 function Layout (){
+  // 初期化はいらない
   const[todoItems,setTodoItems] = useState([])
-
+  
   useEffect(() =>{
     (async () =>{
       setTodoItems([
@@ -24,10 +25,16 @@ function Layout (){
       ])
     })()
   },[])
+
+
+  // const add=(t)=>{
+  //   setTodoItems([...todoItems,{id:todoItems.length+1,t:t,c:false}])
+  // }
+
   
     return (
       <div>
-        <InputComponent/>
+        <InputComponent />
         <FilterComponent/>
         <ListComponent todoItems={todoItems}/>
       </div>
