@@ -15,4 +15,5 @@
 # vendor/
 
 node_modules
-
+webpack.config.js
+*.json
