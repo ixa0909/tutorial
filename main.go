@@ -15,11 +15,11 @@ func main() {
 		})
 	})
 
-	router.GET("/side", func(ctx *gin.Context) {
-		ctx.HTML(200, "side.html", gin.H{
-			"b": "aga",
-		})
-	})
+	// router.GET("/side", func(ctx *gin.Context) {
+	// 	ctx.HTML(200, "side.html", gin.H{
+	// 		"b": "aga",
+	// 	})
+	// })
 
 	
 
