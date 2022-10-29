@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import Mori from "./Mori"
-// import ToDoApp from "./ToDoApp"
 
-// import "../css/styleConverted.css"
 
 import InputComponent from "./InputComponent"
 import FilterComponent from "./FilterComponent"
 import ListComponent from "./ListComponent"
 
-
-import Button from '@mui/material/Button';
-import * as MUI from '@mui/material/';
-import AddIcon from '@mui/icons-material/Add';
-
-import Calender from "./Calender";
-
-function Push() {
-  return <Button variant="contained">Hello World</Button>;
-}
 
 function Layout() {
 
@@ -36,7 +23,7 @@ function Layout() {
     })()
   }, [])
 
-  const plan = "gargaga"
+  
   const add = (t) => {
     setTodoItems([...todoItems, { id: todoItems.length + 1, t: t, c: false }])
   }
@@ -57,17 +44,6 @@ function Layout() {
 
   return (
     <div>
-      <Push />
-      <MUI.FormGroup>
-        <MUI.FormControlLabel control={<MUI.Checkbox defaultChecked />} label="Label" />
-        <MUI.FormControlLabel control={<MUI.Checkbox />} label="Disabled" />
-      </MUI.FormGroup>
-      <MUI.Fab color="primary" aria-label="add">
-        <AddIcon />
-      </MUI.Fab>
-      
-      <Calender plan={plan}></Calender>
-      
       <InputComponent add={add} />
       <FilterComponent />
       <ListComponent todoItems={todoItems} upd={upd} remove={remove} />

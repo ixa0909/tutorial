@@ -7,11 +7,12 @@ import (
 func main() {
 	router := gin.Default()
 	router.LoadHTMLGlob("./*.html")
-	router.Static("/src", "./src")
+	router.Static("/src/css", "./src/css")
+	router.Static("/src/js", "./src/js")
 
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.HTML(200, "index.html", gin.H{
-			"a": "agargaga",
+			"a": "変数をバックエンドからフロントへ渡しています",
 		})
 	})
 
