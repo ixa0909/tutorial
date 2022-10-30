@@ -1,4 +1,4 @@
-module try3
+module tutorial
 
 go 1.18
 
