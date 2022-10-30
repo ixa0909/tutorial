@@ -15,7 +15,9 @@ body {
 	color: white;		/*全体の文字色*/
 	line-height: 2;		/*行間*/
 }
-
+header {
+	top:10px;
+}
 #output {
 	text-align: center;
 	color: #fff;
