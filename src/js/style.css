@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.todo {
+  text-align: center;
+	background: #ffcc00;
+  width:100% auto;
+	margin-top: 10px;
+}
