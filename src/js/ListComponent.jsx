@@ -4,8 +4,11 @@ import "./style.css";
 
 export default function ListComponent(props) {
   return (
-    <div>
-      
+    <div className="todo">
+      <table border="1">
+        <tr>
+          <th>to do 項目</th><th>チェックボックス</th><th>削除</th>
+        </tr>
         {props.todoItems.map((todoItem) => {
           if (props.filterStatus === 1 && todoItem.c === false) {
             return false;
@@ -14,10 +17,10 @@ export default function ListComponent(props) {
             return false;
           }
           return (
-            <div className="todo" >
-            {/* <li key={todoItem.id}> */}
-              <span>{todoItem.t}</span>
-              <span>
+            <tr>
+              {/* <li key={todoItem.id}> */}
+              <td className="title">{todoItem.t}</td>
+              <td className="checkbox">
                 <input
                   type="checkbox"
                   checked={todoItem.c}
@@ -25,8 +28,8 @@ export default function ListComponent(props) {
                     props.upd(todoItem.id);
                   }}
                 />
-              </span>
-              <span>
+              </td>
+              <td className="button">
                 <Button
                   variant="contained"
                   color="error"
@@ -37,12 +40,11 @@ export default function ListComponent(props) {
                 >
                   削除
                 </Button>
-              </span>
-            {/* </li> */}
-            </div>
+              </td>
+            </tr>
           );
         })}
-      
+      </table>
     </div>
   );
 }
