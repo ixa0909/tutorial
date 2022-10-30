@@ -14,7 +14,7 @@ func main() {
 
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.HTML(200, "home.html", gin.H{
-			// "a": "変数をバックエンドからフロントへ渡しています",
+			"a": "変数をバックエンドからフロントへ渡しています",
 		})
 	})
 
