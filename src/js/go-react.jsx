@@ -46,9 +46,10 @@ function Layout() {
 
   return (
     <div>
+    
       <InputComponent add={add} />
       <FilterComponent setFilterStatus={setFilterStatus} />
-      <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus}/>
+      <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} />
     </div>
   );
 }

@@ -3,7 +3,8 @@
 /*全体の設定
 ---------------------------------------------------------------------------*/
 html {
-	margin: 0;padding: 0;
+	margin: 0;
+	padding: 0;
 	height: 100vh;
 	font-size: 14px;
 	/*基準となるフォントサイズ。下の方にある「画面幅900px以上」で基準を大きなサイズに再設定しています。*/
@@ -11,14 +12,18 @@ html {
 
 body {
 	text-align: center;
-	margin: 0;padding: 0;
+	margin: 0;
+	padding: 0;
 	height: 100vh;
 	font-size: 14px;
-	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/*フォント種類*/
 	-webkit-text-size-adjust: none;
 	background: #fff url(../images/bg.jpg) repeat center center/200px;
-	color: white;		/*全体の文字色*/
-	line-height: 2;		/*行間*/
+	color: white;
+	/*全体の文字色*/
+	line-height: 2;
+	/*行間*/
 }
 
 #output {
@@ -27,19 +32,26 @@ body {
 }
 
 /*画像全般の設定*/
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+img {
+	border: none;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
 
 
 
 /*リンクテキスト全般の設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #fcf9f5;	/*文字色*/
+	color: #fcf9f5;
+	/*文字色*/
 	transition: 0.3s;
 }
 
 a:hover {
-	opacity: 0.8;	/*マウスオン時に60%の透明度にする*/
+	opacity: 0.8;
+	/*マウスオン時に60%の透明度にする*/
 }
 
 
@@ -47,20 +59,24 @@ a:hover {
 ---------------------------------------------------------------------------*/
 #mainimg {
 	text-indent: -9999px;
-	position: fixed;top: 0px;z-index: -1;
+	position: fixed;
+	top: 0px;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 	background: url(../images/bg.jpg) no-repeat center center / cover;
 }
 
-
-
-
+header {
+	top:10px;
+}
 
 /*マウスオン時*/
 #menubar li:hover {
-	transform: scale(1.05);		/*105%に拡大*/
-	filter: brightness(1.1);	/*少しだけ明るくする*/
+	transform: scale(1.05);
+	/*105%に拡大*/
+	filter: brightness(1.1);
+	/*少しだけ明るくする*/
 }
 
 
@@ -68,24 +84,68 @@ a:hover {
 
 
 /*著作部分*/
-footer .pr {display: block;}
+footer .pr {
+	display: block;
+}
 
 
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
-.pagetop-show {display: block;}
+.pagetop-show {
+	display: block;
+}
 
 
 
 /*その他
 ---------------------------------------------------------------------------*/
-.clearfix::after {content: "";display: block;clear: both;}
-.color-theme, .color-theme a {color: #74791b !important;}
-.color-check, .color-check a {color: #f00 !important;}
-.c {text-align: center !important;}
-.ws {width: 95%;display: block;}
-.wl {width: 95%;display: block;}
-.mb30 {margin-bottom: 30px !important;}
-.look {display: inline-block;padding: 0px 10px;background: #666; color: #fff; border-radius: 3px;margin: 5px 0;}
-.look .color-check {color: #ffcc00 !important;}
-.small {font-size: 0.6em;}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.color-theme,
+.color-theme a {
+	color: #74791b !important;
+}
+
+.color-check,
+.color-check a {
+	color: #f00 !important;
+}
+
+.c {
+	text-align: center !important;
+}
+
+.ws {
+	width: 95%;
+	display: block;
+}
+
+.wl {
+	width: 95%;
+	display: block;
+}
+
+.mb30 {
+	margin-bottom: 30px !important;
+}
+
+.look {
+	display: inline-block;
+	padding: 0px 10px;
+	background: #666;
+	color: #fff;
+	border-radius: 3px;
+	margin: 5px 0;
+}
+
+.look .color-check {
+	color: #ffcc00 !important;
+}
+
+.small {
+	font-size: 0.6em;
+}
