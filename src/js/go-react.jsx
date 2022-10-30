@@ -15,15 +15,20 @@ function Layout() {
 
   const [todoItems, setTodoItems] = useState([])
 
+  // useEffect(() => {
+  //   (async () => {
+  //     setTodoItems([
+  //       { id: 1, t: "眠る", c: false },
+  //       { id: 2, t: "食べる", c: true },
+  //       { id: 3, t: "運動する", c: true },
+  //       { id: 4, t: "研究する", c: true },
+  //       { id: 5, t: "遊ぶ", c: true },
+  //     ])
+  //   })()
+  // }, [])
   useEffect(() => {
     (async () => {
-      setTodoItems([
-        { id: 1, t: "眠る", c: false },
-        { id: 2, t: "食べる", c: true },
-        { id: 3, t: "運動する", c: true },
-        { id: 4, t: "研究する", c: true },
-        { id: 5, t: "遊ぶ", c: true },
-      ])
+      setTodoItems(JSON.parse(localStorage.getItem('todos')))
     })()
   }, [])
 
@@ -51,7 +56,7 @@ function Layout() {
       
       <InputComponent add={add} />
       <FilterComponent setFilterStatus={setFilterStatus} />
-      <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} />
+      <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} setTodoItems={setTodoItems}/>
       
     </div>
   );

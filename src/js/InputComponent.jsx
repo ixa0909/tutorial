@@ -15,6 +15,7 @@ export default function InputComponent(props) {
     const save = (e) => {
         e.preventDefault()
         props.add(t)
+        
         setT('')
     }
     return (
