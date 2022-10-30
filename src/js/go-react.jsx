@@ -9,12 +9,14 @@ import ListComponent from "./ListComponent"
 
 function Layout() {
 
+  const [filterStatus, setFilterStatus] = useState(0)
+
   const [todoItems, setTodoItems] = useState([])
 
   useEffect(() => {
     (async () => {
       setTodoItems([
-        { id: 1, t: "眠る", c: true },
+        { id: 1, t: "眠る", c: false },
         { id: 2, t: "食べる", c: true },
         { id: 3, t: "運動する", c: true },
         { id: 4, t: "研究する", c: true },
@@ -23,7 +25,7 @@ function Layout() {
     })()
   }, [])
 
-  
+
   const add = (t) => {
     setTodoItems([...todoItems, { id: todoItems.length + 1, t: t, c: false }])
   }
@@ -45,8 +47,8 @@ function Layout() {
   return (
     <div>
       <InputComponent add={add} />
-      <FilterComponent />
-      <ListComponent todoItems={todoItems} upd={upd} remove={remove} />
+      <FilterComponent setFilterStatus={setFilterStatus} />
+      <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus}/>
     </div>
   );
 }
