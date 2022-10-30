@@ -1,5 +1,6 @@
 import React from "react";
-
+import Button from "@mui/material/Button";
+import "./style.css";
 export default function FilterComponent(props) {
     const all = () => {
         props.setFilterStatus(0)
@@ -11,10 +12,10 @@ export default function FilterComponent(props) {
         props.setFilterStatus(2)
     }
     return (
-        <div>
-            <button onClick={all}>全て</button>
-            <button onClick={done}>完了</button>
-            <button onClick={unDone}>未完了</button>
+        <div className="filter">
+            <Button variant="contained" color="secondary" onClick={all}>全て</Button>
+            <Button variant="contained" color="secondary" onClick={done}>完了</Button>
+            <Button variant="contained" color="secondary" onClick={unDone}>未完了</Button>
         </div>
     )
 }

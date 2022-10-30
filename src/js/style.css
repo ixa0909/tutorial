@@ -2,31 +2,46 @@
 
 .todo {
   text-align: left;
-	background: #fff;
-  width:100% auto;
-	
+  background: #fff;
+  width: 100% auto;
 }
 
+.filter {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 10px 0;
+  
+  
+}
+
+.filter > div {
+  padding: 5px 5px;
+  
+}
 
 .button {
   margin: 0% 0px 0% 0%;
 }
 
 .checkbox {
-  text-align: center;;
-  margin:0;
+  text-align: center;
+  margin: 0;
 }
 
 /* まとめてするとなぜか反映されない */
 .title {
   margin: 0 0 0 0%;
-  color:black
+  color: black;
 }
 
 th {
-  color:black;
-}
-table {
-  width:100%;
+  text-align: center;
+  color: black;
 }
 
+tr {
+  text-align: center;
+}
+table {
+  width: 100%;
+}
