@@ -26,6 +26,7 @@ function Layout() {
   //     ])
   //   })()
   // }, [])
+
   useEffect(() => {
     (async () => {
       setTodoItems(JSON.parse(localStorage.getItem('todos')))
