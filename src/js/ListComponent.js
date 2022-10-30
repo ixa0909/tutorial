@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@mui/material/Button';
 
 export default function ListComponent(props) {
     return (
@@ -30,6 +31,13 @@ export default function ListComponent(props) {
                                 }}>
                                     削除
                                 </button>
+                                <Button variant="outlined" color="error" onClick={e => {
+                                    e.preventDefault()
+                                    props.remove(todoItem.id)
+                                }}>
+                                    削除
+                                </Button>
+
                             </span>
                         </li>
                     )

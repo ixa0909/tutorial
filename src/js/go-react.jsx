@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 import InputComponent from "./InputComponent"
 import FilterComponent from "./FilterComponent"
 import ListComponent from "./ListComponent"
+import Footer from "./Footer";
+
 
 
 function Layout() {
@@ -46,10 +48,11 @@ function Layout() {
 
   return (
     <div>
-    
+      
       <InputComponent add={add} />
       <FilterComponent setFilterStatus={setFilterStatus} />
       <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} />
+      <Footer/>
     </div>
   );
 }
