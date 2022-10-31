@@ -45,6 +45,9 @@ img {
 	vertical-align: middle;
 }
 
+iframe {
+	position: relative;
+}
 h1 {
 	size: 10px;
 }

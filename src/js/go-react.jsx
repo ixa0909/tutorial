@@ -56,7 +56,8 @@ function Layout() {
 
   return (
     <div>
-      
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Lf4EAHI534w" title="YouTube video player" height="315" width="560" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       <InputComponent add={add} />
       <FilterComponent setFilterStatus={setFilterStatus} />
       <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} setTodoItems={setTodoItems}/>
