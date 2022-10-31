@@ -45,9 +45,6 @@ img {
 	vertical-align: middle;
 }
 
-iframe {
-	position: relative;
-}
 h1 {
 	size: 10px;
 }
@@ -78,6 +75,10 @@ a:hover {
 	background: url(../images/bg.jpg) no-repeat;
 }
 
+iframe {
+	/* position: fixed;
+	z-index: 2; */
+}
 
 
 header {
