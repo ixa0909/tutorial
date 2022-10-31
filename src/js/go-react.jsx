@@ -24,7 +24,7 @@ function Layout() {
         { id: 4, t: "研究する", c: true },
         { id: 5, t: "遊ぶ", c: true },
       ])
-      // setTodoItems(JSON.parse(localStorage.getItem('todos')))
+      setTodoItems(JSON.parse(localStorage.getItem('todos')))
     })()
   }, [])
 
