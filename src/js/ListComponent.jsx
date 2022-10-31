@@ -58,7 +58,7 @@ export default function ListComponent(props) {
                   onClick={(e) => {
                     e.preventDefault();
                     props.remove(todoItem.id);
-                    alert("削除");
+                    // alert("削除");
                   }}
                 >
                   削除

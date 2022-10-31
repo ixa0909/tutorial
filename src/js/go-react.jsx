@@ -15,24 +15,26 @@ function Layout() {
 
   const [todoItems, setTodoItems] = useState([])
 
-  // useEffect(() => {
-  //   (async () => {
-  //     setTodoItems([
-  //       { id: 1, t: "眠る", c: false },
-  //       { id: 2, t: "食べる", c: true },
-  //       { id: 3, t: "運動する", c: true },
-  //       { id: 4, t: "研究する", c: true },
-  //       { id: 5, t: "遊ぶ", c: true },
-  //     ])
-  //   })()
-  // }, [])
-
   useEffect(() => {
     (async () => {
-      setTodoItems(JSON.parse(localStorage.getItem('todos')))
+      setTodoItems([
+        { id: 1, t: "眠る", c: false },
+        { id: 2, t: "食べる", c: true },
+        { id: 3, t: "運動する", c: true },
+        { id: 4, t: "研究する", c: true },
+        { id: 5, t: "遊ぶ", c: true },
+      ])
+      // setTodoItems(JSON.parse(localStorage.getItem('todos')))
     })()
   }, [])
 
+  // useEffect(() => {
+  //   (async () => {
+  //     setTodoItems(JSON.parse(localStorage.getItem('todos')))
+      
+  //   })()
+  // }, [])
+  // console.log(todoItems.length)
 
   const add = (t) => {
     setTodoItems([...todoItems, { id: todoItems.length + 1, t: t, c: false }])
