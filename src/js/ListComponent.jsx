@@ -16,8 +16,13 @@ export default function ListComponent(props) {
     localStorage.setItem('todos',JSON.stringify(props.todoItems))
 
     props.setTodoItems(JSON.parse(localStorage.getItem('todos')))
-    console.log(props.todoItems)
+    // console.log(props.todoItems)
+    
+  }
 
+  function remove(e){
+    e.preventDefault();
+    localStorage.removeItem('todos')
   }
 
   return (
@@ -80,6 +85,16 @@ export default function ListComponent(props) {
             >
               保存
             </Button>
+            <div style={{textAlign: 'right'}}>
+            <Button 
+              variant="contained"
+              color="error"
+              onClick={remove}
+              // onClick={try_alert}
+            >
+              全データ削除
+            </Button>
+            </div>
     </div>
   );
 }

@@ -15,26 +15,19 @@ function Layout() {
 
   const [todoItems, setTodoItems] = useState([])
 
+
   useEffect(() => {
     (async () => {
-      setTodoItems([
-        { id: 1, t: "眠る", c: false },
-        { id: 2, t: "食べる", c: true },
-        { id: 3, t: "運動する", c: true },
-        { id: 4, t: "研究する", c: true },
-        { id: 5, t: "遊ぶ", c: true },
-      ])
-      setTodoItems(JSON.parse(localStorage.getItem('todos')))
+      console.log(1)
+      if(localStorage.getItem('todos')===null){
+        // setTodoItems([
+        //         { id: 1, t: "眠る", c: false },
+        //       ])
+      }else{
+        setTodoItems(JSON.parse(localStorage.getItem('todos')))
+      }
     })()
   }, [])
-
-  // useEffect(() => {
-  //   (async () => {
-  //     setTodoItems(JSON.parse(localStorage.getItem('todos')))
-      
-  //   })()
-  // }, [])
-  // console.log(todoItems.length)
 
   const add = (t) => {
     setTodoItems([...todoItems, { id: todoItems.length + 1, t: t, c: false }])
@@ -56,12 +49,9 @@ function Layout() {
 
   return (
     <div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Lf4EAHI534w" title="YouTube video player" height="315" width="560" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
       <InputComponent add={add} />
       <FilterComponent setFilterStatus={setFilterStatus} />
       <ListComponent todoItems={todoItems} upd={upd} remove={remove} filterStatus={filterStatus} setTodoItems={setTodoItems}/>
-      
     </div>
   );
 }
