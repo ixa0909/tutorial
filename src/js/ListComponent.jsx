@@ -4,24 +4,23 @@ import "./style.css";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import Checkbox from "@mui/material/Checkbox";
 
-
 export default function ListComponent(props) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   function try_alert(e) {
     e.preventDefault();
-    alert(9)
+    alert(9);
   }
-  function store(e){
+  function store(e) {
     e.preventDefault();
-    localStorage.setItem('todos',JSON.stringify(props.todoItems))
+    localStorage.setItem("todos", JSON.stringify(props.todoItems));
 
-    props.setTodoItems(JSON.parse(localStorage.getItem('todos')))
+    props.setTodoItems(JSON.parse(localStorage.getItem("todos")));
     // console.log(props.todoItems)
-    
   }
 
-  function remove(e){
+  function remove(e) {
     e.preventDefault();
+    // props.setTodoItems(null);
     localStorage.removeItem('todos')
   }
 
@@ -69,32 +68,28 @@ export default function ListComponent(props) {
                   削除
                 </Button>
               </td>
-              
             </tr>
-            
-            
-          
           );
         })}
       </table>
       <Button
-              variant="contained"
-              color="error"
-              onClick={store}
-              // onClick={try_alert}
-            >
-              保存
-            </Button>
-            <div style={{textAlign: 'right'}}>
-            <Button 
-              variant="contained"
-              color="error"
-              onClick={remove}
-              // onClick={try_alert}
-            >
-              全データ削除
-            </Button>
-            </div>
+        variant="contained"
+        color="error"
+        onClick={store}
+        // onClick={try_alert}
+      >
+        保存
+      </Button>
+      {/* <div style={{ textAlign: "right" }}>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={remove}
+          // onClick={try_alert}
+        >
+          全データ削除
+        </Button>
+      </div> */}
     </div>
   );
 }
