@@ -21,14 +21,14 @@ export default function ListComponent(props) {
   function remove(e) {
     e.preventDefault();
     // props.setTodoItems(null);
-    localStorage.removeItem('todos')
+    localStorage.removeItem("todos");
   }
 
   return (
     <div className="todo">
       <table border="1">
         <tr>
-          <th>to do 項目</th>
+          <th>to do 項</th>
           <th>チェックボックス</th>
           <th>削除</th>
         </tr>
